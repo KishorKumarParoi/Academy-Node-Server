@@ -32,6 +32,18 @@ function card(user: cardDetails): cardDetails {
 
 card({ cardNumber: "kihshor", cardCode: 100, cvv: 108 });
 
-const numbers: number[] = [];
+const numbers: Array<number> = [];
 numbers.push(100);
 console.log(numbers);
+
+const kkp = "kishor";
+console.log(kkp);
+
+const enum Seat {
+  sovon,
+  sovon_chair,
+  snigdha,
+}
+
+const kishorSeat = Seat.sovon_chair;
+console.log(kishorSeat);

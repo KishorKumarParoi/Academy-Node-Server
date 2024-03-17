@@ -16,3 +16,7 @@ card({ cardNumber: "kihshor", cardCode: 100, cvv: 108 });
 var numbers = [];
 numbers.push(100);
 console.log(numbers);
+var kkp = "kishor";
+console.log(kkp);
+var kishorSeat = 1 /* Seat.sovon_chair */;
+console.log(kishorSeat);
