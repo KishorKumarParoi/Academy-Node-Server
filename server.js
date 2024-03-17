@@ -13,3 +13,6 @@ function card(user) {
     };
 }
 card({ cardNumber: "kihshor", cardCode: 100, cvv: 108 });
+var numbers = [];
+numbers.push(100);
+console.log(numbers);

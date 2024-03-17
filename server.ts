@@ -31,3 +31,7 @@ function card(user: cardDetails): cardDetails {
 }
 
 card({ cardNumber: "kihshor", cardCode: 100, cvv: 108 });
+
+const numbers: number[] = [];
+numbers.push(100);
+console.log(numbers);
