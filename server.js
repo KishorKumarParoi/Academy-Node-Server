@@ -20,3 +20,27 @@ var kkp = "kishor";
 console.log(kkp);
 var kishorSeat = 1 /* Seat.sovon_chair */;
 console.log(kishorSeat);
+var User = /** @class */ (function () {
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+        this._courseCount = 10;
+        console.log(name, age);
+    }
+    Object.defineProperty(User.prototype, "courseCount", {
+        get: function () {
+            return this._courseCount;
+        },
+        set: function (count) {
+            this._courseCount = count;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return User;
+}());
+var Kishor = new User("Kishor", 25);
+console.log(Kishor.age);
+console.log(Kishor.courseCount);
+Kishor.courseCount = 1000;
+console.log(Kishor);
