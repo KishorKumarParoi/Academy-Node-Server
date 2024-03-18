@@ -76,3 +76,29 @@ class subUser extends User {
 
 const sakib = new subUser("kishor", 25, "blue");
 console.log(sakib);
+
+function identity<T>(value: T): T {
+  return value;
+}
+
+console.log(identity("Kishor"));
+
+class ArrayContainer<T> {
+  constructor(private items: T[]) {
+    console.log(items);
+  }
+
+  get(index: number): T {
+    return this.items[index];
+  }
+
+  add(item: T): void {
+    this.items.push(item);
+  }
+}
+
+type numString = number | string;
+
+const numberContainer = new ArrayContainer<numString>([1, 3, "100"]);
+
+console.log(numberContainer);

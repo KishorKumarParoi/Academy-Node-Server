@@ -70,3 +70,22 @@ var subUser = /** @class */ (function (_super) {
 }(User));
 var sakib = new subUser("kishor", 25, "blue");
 console.log(sakib);
+function identity(value) {
+    return value;
+}
+console.log(identity("Kishor"));
+var ArrayContainer = /** @class */ (function () {
+    function ArrayContainer(items) {
+        this.items = items;
+        console.log(items);
+    }
+    ArrayContainer.prototype.get = function (index) {
+        return this.items[index];
+    };
+    ArrayContainer.prototype.add = function (item) {
+        this.items.push(item);
+    };
+    return ArrayContainer;
+}());
+var numberContainer = new ArrayContainer([1, 3, "100"]);
+console.log(numberContainer);
