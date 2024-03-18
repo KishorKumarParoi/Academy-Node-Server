@@ -48,7 +48,7 @@ const enum Seat {
 const kishorSeat = Seat.sovon_chair;
 console.log(kishorSeat);
 
-class User {
+abstract class User {
   protected _courseCount = 10;
 
   constructor(public name: string, public age: number) {
@@ -68,14 +68,11 @@ class subUser extends User {
   changeCourseContent(count: number) {
     this._courseCount = count;
   }
+
+  constructor(public name: string, public age: number, public country: string) {
+    super(name, age);
+  }
 }
 
-const Kishor = new User("Kishor", 25);
-console.log(Kishor.age);
-console.log(Kishor.courseCount);
-Kishor.courseCount = 1000;
-console.log(Kishor);
-
-const sakib = new subUser("sakib", 23);
-sakib.changeCourseContent(108);
+const sakib = new subUser("kishor", 25, "blue");
 console.log(sakib);

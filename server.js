@@ -56,19 +56,17 @@ var User = /** @class */ (function () {
 }());
 var subUser = /** @class */ (function (_super) {
     __extends(subUser, _super);
-    function subUser() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function subUser(name, age, country) {
+        var _this = _super.call(this, name, age) || this;
+        _this.name = name;
+        _this.age = age;
+        _this.country = country;
+        return _this;
     }
     subUser.prototype.changeCourseContent = function (count) {
         this._courseCount = count;
     };
     return subUser;
 }(User));
-var Kishor = new User("Kishor", 25);
-console.log(Kishor.age);
-console.log(Kishor.courseCount);
-Kishor.courseCount = 1000;
-console.log(Kishor);
-var sakib = new subUser("sakib", 23);
-sakib.changeCourseContent(108);
+var sakib = new subUser("kishor", 25, "blue");
 console.log(sakib);
