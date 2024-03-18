@@ -49,7 +49,7 @@ const kishorSeat = Seat.sovon_chair;
 console.log(kishorSeat);
 
 class User {
-  private _courseCount = 10;
+  protected _courseCount = 10;
 
   constructor(public name: string, public age: number) {
     console.log(name, age);
@@ -64,8 +64,18 @@ class User {
   }
 }
 
+class subUser extends User {
+  changeCourseContent(count: number) {
+    this._courseCount = count;
+  }
+}
+
 const Kishor = new User("Kishor", 25);
 console.log(Kishor.age);
 console.log(Kishor.courseCount);
 Kishor.courseCount = 1000;
 console.log(Kishor);
+
+const sakib = new subUser("sakib", 23);
+sakib.changeCourseContent(108);
+console.log(sakib);

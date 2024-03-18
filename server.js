@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 console.log("hello kkp");
 function Sum(a, b) {
     return (a + b).toString();
@@ -39,8 +54,21 @@ var User = /** @class */ (function () {
     });
     return User;
 }());
+var subUser = /** @class */ (function (_super) {
+    __extends(subUser, _super);
+    function subUser() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    subUser.prototype.changeCourseContent = function (count) {
+        this._courseCount = count;
+    };
+    return subUser;
+}(User));
 var Kishor = new User("Kishor", 25);
 console.log(Kishor.age);
 console.log(Kishor.courseCount);
 Kishor.courseCount = 1000;
 console.log(Kishor);
+var sakib = new subUser("sakib", 23);
+sakib.changeCourseContent(108);
+console.log(sakib);
